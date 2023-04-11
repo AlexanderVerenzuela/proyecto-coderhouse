@@ -11,26 +11,44 @@
 
 /* Menu - Barra de navegación */
 
-nav {
-  position: fixed;
-  width: 100vw;
-  background-color: #ffffff;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 70px;
-  justify-items: center;
+ /* Menu bootstrap */
+ .navbar>.container-fluid {
+  background-color: #fff;
+ }
+ .navbar-toggler{
+  border: none;
+ }
+ .navbar-toggler:focus{
+  box-shadow: none;
+ }
+ .navbar-toggler-icon{
+  width: 35px;
+ }
+ .navbar-nav {
+  width: 100%;
   align-items: center;
-  z-index: 10;
+ }
+ .navbar-brand {
+  padding-left: 15px;
+ }
+ .fixed-top {
+  height: 70px;
+  box-shadow: -1px 5px 17px -4px #727272bf;
+ }
+ .navbar-expand-lg .navbar-nav .nav-link {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #464648;
+    padding: 22px;
+ }
+ .navbar-nav .nav-link.active {
+  color: #ffb700;
+  border-bottom: #ffb700 solid 3px;
 }
-nav a {
-  justify-self: start;
-  margin: 10px 20px;
-}
-.nav-logo {
-  width: 50px;
-}
-nav ul {
-  display: none;
+.navbar-nav .nav-link:hover {
+  color: #ffb700;
+  border-bottom: #ffb700 solid 3px;
 }
 
 /* Seccion Inicio */
@@ -43,11 +61,7 @@ nav ul {
   text-align: center;
 }
 .alambre1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200px;
-  z-index: 20;
+  display: none;
 }
 .alambre2 {
   position: absolute;
@@ -280,9 +294,6 @@ form input:focus {
     justify-items: center;
     align-items: center;
   }
-  .alambre1 {
-    width: 25vw;
-  }
   .alambre2 {
     width: 45vw;
     bottom: -70px;
@@ -314,36 +325,21 @@ form input:focus {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   /* Menu */
-  nav {
-    grid-template-columns: 120px 1fr 120px;
+  .fixed-top{
+    box-shadow: none;
   }
-  nav a {
-    justify-self: center;
-    margin: 0;
-  }
-  nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 70px;
-  }
-  nav ul li a {
-    text-decoration: none;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: #464648;
-    padding: 22px;
-  }
-  .menu-active,
-  nav ul li a:hover {
-    color: #ffb700;
-    border-bottom: #ffb700 solid 3px;
-  }
+  
   /* Seccion inicio */
+  .alambre1 {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25vw;
+    z-index: 2000;
+  }
   .alambre2 {
     bottom: -200px;
   }
