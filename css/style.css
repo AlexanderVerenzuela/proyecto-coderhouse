@@ -91,6 +91,7 @@
 .animated-container{
   position: relative;
   overflow: hidden;
+  margin-top: 5px;
 }
 .animated-container img {
   width: 100vw;
@@ -129,16 +130,24 @@ footer {
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding-top: 10px;
 }
 footer div {
   padding: 10px 5px;
+}
+footer div p img {
+  width: 22px;
 }
 .redes-container {
   display: flex;
   justify-content: space-evenly;
 }
 .redes-logo {
-  width: 30px;
+  width: 35px;
+  filter: invert(1);
+}
+.redes-logo:hover {
+  filter: invert(73%) sepia(85%) saturate(2598%) hue-rotate(1deg) brightness(106%) contrast(103%);
 }
 .footer-logo {
   width: 70px;
@@ -157,7 +166,7 @@ footer div {
 .products-container {
   display: flex;
   flex-wrap: wrap;
-  padding: 10px;
+  padding: 35px 10px;
 }
 .products-container div {
   width: 50%;
