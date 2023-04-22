@@ -1,0 +1,45 @@
+.section-colecciones {
+    padding-top: 70px;
+    .coleccion-contenido {
+        display: flex;
+        flex-direction: column;
+        .coleccion {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 10px;
+            text-align: justify;
+            .invert {
+            flex-direction: column-reverse;
+            }
+            @include desktop{
+                flex-direction: row;
+                padding: 15px 0;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+            img {
+                    height: 200px;
+                    object-fit: contain;
+                    @include desktop{
+                        flex-basis: 50%;
+                        height: 380px;
+                    }
+            }
+            div{
+                @include desktop{
+                    flex-basis: 40%;
+                }
+                
+                h2 {
+                    text-align: center;
+                    color: #ffb700;
+                    text-transform: uppercase;
+                }
+            }
+            
+        }
+        
+    }
+    
+  }

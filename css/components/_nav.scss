@@ -1,0 +1,45 @@
+nav{
+    height: 70px;
+    box-shadow: -1px 5px 17px -4px #727272bf;
+    background-color: #fff;
+    @include desktop{
+        box-shadow: none;
+    }
+    div{
+        background-color: #fff;
+        .logo-nav{
+            padding-left: 15px;
+            img{
+                width: 50px;
+            }    
+        }
+        .boton-nav{
+            border: none;
+            &:focus{
+                box-shadow: none;
+            }
+        }
+        .boton-nav-icono{
+            width: 35px;
+        }
+        .nav-items{
+            width: 100%;
+            align-items: center;
+            a{
+                font-family: "Montserrat", sans-serif;
+                font-weight: 800;
+                text-transform: uppercase;
+                color: #464648;
+                padding: 22px !important;
+                &:hover {
+                    color: #ffb700;
+                    border-bottom: #ffb700 solid 3px;
+                  }
+            }
+            .active{
+                color: #ffb700 !important;
+                border-bottom: #ffb700 solid 3px;
+            }
+        }
+    }
+   }

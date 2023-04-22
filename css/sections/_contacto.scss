@@ -1,0 +1,46 @@
+.contacto {
+    padding-top: 70px;
+    min-height: 100vh;
+    display: flex;
+    .form-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        input {
+            padding: 10px 0;
+            margin-bottom: 30px;
+            border: none;
+            border-bottom: 1px solid #ffb700;
+            &:focus {
+                outline: none;
+                animation-name: borde-bajo;
+                animation-iteration-count: infinite;
+                animation-duration: 2s;
+            }
+            @keyframes borde-bajo {
+                0% {border-image: linear-gradient(90deg, #ffb700 50%, #fff 100%);
+                    border-bottom: 2px solid transparent;
+                    border-image-slice: 1;}
+                50% {border-image: linear-gradient(90deg, #fff 50%, #ffb700 100% );
+                    border-bottom: 2px solid transparent;
+                    border-image-slice: 1;}
+                100% {border-image: linear-gradient(90deg, #ffb700 50%, #fff 100%);
+                    border-bottom: 2px solid transparent;
+                     border-image-slice: 1;}
+            }
+        }
+        .boton {
+            background-color: #ffb700;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+}

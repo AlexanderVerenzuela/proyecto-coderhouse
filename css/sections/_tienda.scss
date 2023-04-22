@@ -1,0 +1,41 @@
+.section-tienda {
+    padding-top: 70px;
+    .products-container {
+        display: grid;
+        grid-template-columns: repeat(
+          auto-fit,
+          minmax(
+            300px,
+            1fr
+          )
+        );
+        gap: 25px;
+        padding-bottom: 25px;
+        div {
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+            img {
+            width: 100%;
+            }
+            p{
+                padding-left: 10px;
+                span {
+                    text-transform: uppercase;
+                    font-weight: 800;
+                    font-size: 12px;
+                }
+            }
+            a{
+                color: #fff;
+                background-color: #ffb700;
+                text-decoration: none;
+                font-weight: 600;
+                padding: 3px 5px;
+                border-radius: 10px;
+                align-self: flex-end;
+                margin-right: 10px;
+            }
+        }
+    }
+}
