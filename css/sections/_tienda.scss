@@ -10,13 +10,21 @@
           )
         );
         gap: 25px;
-        padding-bottom: 25px;
+        padding:0 10px 25px;
         div {
             display: flex;
             flex-direction: column;
             padding: 16px;
             img {
             width: 100%;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+            object-position: top;
+            filter: grayscale(0.6);
+            transition: all 0.4s;
+            &:hover{
+                filter: grayscale(0);
+            }
             }
             p{
                 padding-left: 10px;

@@ -79,6 +79,9 @@
               }
             img{
             width: 100%;
+            filter: grayscale(1);
+            aspect-ratio: 34/47;
+            object-fit: cover;
             transition: all 2.2s cubic-bezier(.14,.4,.09,.99);
             }
             div{
