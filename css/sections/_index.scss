@@ -1,26 +1,12 @@
-.primario {
+.inicio {
+  &__primario {
     position: relative;
     padding-top: 70px;
     display: flex;
     flex-direction: column;
     text-align: center;
-    @include tablet{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-items: center;
-        align-items: center;
-    }
-    
     .alambre1 {
         display: none;
-        @include desktop{
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 25vw;
-            z-index: 2000;
-        }
       }
     .alambre2 {
         position: absolute;
@@ -28,44 +14,25 @@
         bottom: -50px;
         right: 0;
         z-index: -10;
-        @include tablet{
-            width: 45vw;
-            bottom: -70px;
-        }
-        @include desktop{
-            bottom: -200px;
-        }
       }
     .text-container{
         .img-titulo{
             width: 300px;
-            @include tablet{
-                width: 70%;
-            }
         }
     }
     .vid-container {
         display: flex;
         justify-content: center;
         z-index: -20;
-        @include desktop{
-            width: 100%;
-            justify-content: flex-start;
         }
         .vid-muestra {
             min-width: 300px;
             max-width: 450px;
           }
-      }
 }
-.secundario {
+&__secundario {
     display: flex;
     flex-direction: column;
-    @include tablet{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 10px;
-    }
     div{
         position: relative;
         overflow: hidden;
@@ -106,4 +73,52 @@
             }
         }
     }
+}
+}
+
+@media (min-width: 768px) {
+  .inicio {
+    &__primario {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      align-items: center;
+      .alambre2 {
+        width: 45vw;
+        bottom: -70px;
+       }
+       .img-titulo {
+        width: 70%;
+      }
+    }
+    &__secundario {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 10px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .inicio{
+    &__primario{
+      .alambre1 {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 25vw;
+          z-index: 2000;
+        }
+      .alambre2 {
+          bottom: -200px;
+        }
+      .vid-container {
+          width: 100%;
+          justify-content: flex-start;
+      }
+    }
+  } 
 }

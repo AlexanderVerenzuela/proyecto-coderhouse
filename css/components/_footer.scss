@@ -4,13 +4,6 @@ footer{
     display: flex;
     flex-direction: column;
     padding-top: 10px;
-    @include tablet{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        padding: 15px 20px 10px;
-        align-items: center;
-        justify-items: center;
-    }
     div{
         padding: 10px 5px;
         margin: auto;
@@ -36,4 +29,13 @@ footer{
         width: 70px;
         filter: invert(1);
       }
+}
+@media (min-width: 768px) {
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 15px 20px 10px;
+        align-items: center;
+        justify-items: center; 
+    }
 }

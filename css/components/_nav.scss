@@ -2,9 +2,6 @@ nav{
     height: 70px;
     box-shadow: -1px 5px 17px -4px #727272bf;
     background-color: #fff;
-    @include desktop{
-        box-shadow: none;
-    }
     div{
         background-color: #fff;
         .logo-nav{
@@ -32,14 +29,19 @@ nav{
                 color: #464648;
                 padding: 22px !important;
                 &:hover {
-                    color: #ffb700;
-                    border-bottom: #ffb700 solid 3px;
+                    color: $color-primario;
+                    border-bottom: $color-primario solid 3px;
                   }
             }
             .active{
-                color: #ffb700 !important;
-                border-bottom: #ffb700 solid 3px;
+                color: $color-primario !important;
+                border-bottom: $color-primario solid 3px;
             }
         }
     }
-   }
+}
+@media (min-width: 992px){
+    nav{
+        box-shadow: none;
+    }
+}

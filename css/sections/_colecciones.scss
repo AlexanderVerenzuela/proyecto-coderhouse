@@ -14,9 +14,10 @@
             }
             div{
                 h2 {
-                    text-align: center;
-                    color: #ffb700;
-                    text-transform: uppercase;
+                  // Extend agregado************************
+                    @extend .titulo-section; 
+                    color: $color-primario;
+                    font-size: 26px;
                 }
             }
         }

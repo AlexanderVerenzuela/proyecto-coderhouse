@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap");
-.titulo-section {
+.titulo-section, .section-colecciones .coleccion-contenido .coleccion div h2 {
   font-weight: 800;
   font-size: 30px;
   padding: 15px 0;
@@ -16,11 +16,6 @@ nav {
   height: 70px;
   box-shadow: -1px 5px 17px -4px rgba(114, 114, 114, 0.7490196078);
   background-color: #fff;
-}
-@media only screen and (min-width: 992px) {
-  nav {
-    box-shadow: none;
-  }
 }
 nav div {
   background-color: #fff;
@@ -60,21 +55,17 @@ nav div .nav-items .active {
   border-bottom: #ffb700 solid 3px;
 }
 
+@media (min-width: 992px) {
+  nav {
+    box-shadow: none;
+  }
+}
 footer {
   background-color: #000;
   color: #fff;
   display: flex;
   flex-direction: column;
   padding-top: 10px;
-}
-@media only screen and (min-width: 768px) {
-  footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 15px 20px 10px;
-    align-items: center;
-    justify-items: center;
-  }
 }
 footer div {
   padding: 10px 5px;
@@ -102,99 +93,60 @@ footer .footer-logo {
   filter: invert(1);
 }
 
-.primario {
+@media (min-width: 768px) {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 15px 20px 10px;
+    align-items: center;
+    justify-items: center;
+  }
+}
+.inicio__primario {
   position: relative;
   padding-top: 70px;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-@media only screen and (min-width: 768px) {
-  .primario {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-  }
-}
-.primario .alambre1 {
+.inicio__primario .alambre1 {
   display: none;
 }
-@media only screen and (min-width: 992px) {
-  .primario .alambre1 {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 25vw;
-    z-index: 2000;
-  }
-}
-.primario .alambre2 {
+.inicio__primario .alambre2 {
   position: absolute;
   width: 250px;
   bottom: -50px;
   right: 0;
   z-index: -10;
 }
-@media only screen and (min-width: 768px) {
-  .primario .alambre2 {
-    width: 45vw;
-    bottom: -70px;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .primario .alambre2 {
-    bottom: -200px;
-  }
-}
-.primario .text-container .img-titulo {
+.inicio__primario .text-container .img-titulo {
   width: 300px;
 }
-@media only screen and (min-width: 768px) {
-  .primario .text-container .img-titulo {
-    width: 70%;
-  }
-}
-.primario .vid-container {
+.inicio__primario .vid-container {
   display: flex;
   justify-content: center;
   z-index: -20;
 }
-@media only screen and (min-width: 992px) {
-  .primario .vid-container {
-    width: 100%;
-    justify-content: flex-start;
-  }
-}
-.primario .vid-container .vid-muestra {
+.inicio__primario .vid-muestra {
   min-width: 300px;
   max-width: 450px;
 }
-
-.secundario {
+.inicio__secundario {
   display: flex;
   flex-direction: column;
 }
-@media only screen and (min-width: 768px) {
-  .secundario {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
-  }
-}
-.secundario div {
+.inicio__secundario div {
   position: relative;
   overflow: hidden;
   margin-top: 5px;
 }
-.secundario div a:hover > .capa {
+.inicio__secundario div a:hover > .capa {
   opacity: 1;
 }
-.secundario div a:hover > img {
+.inicio__secundario div a:hover > img {
   transform: scale(1.1);
 }
-.secundario div a img {
+.inicio__secundario div a img {
   width: 100%;
   filter: grayscale(1);
   aspect-ratio: 34/47;
@@ -202,7 +154,7 @@ footer .footer-logo {
      object-fit: cover;
   transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
 }
-.secundario div a div {
+.inicio__secundario div a div {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -215,7 +167,7 @@ footer .footer-logo {
   transition: all 0.4s ease;
   opacity: 0;
 }
-.secundario div a div p {
+.inicio__secundario div a div p {
   color: #fff;
   font-size: 30px;
   font-weight: 800;
@@ -223,21 +175,61 @@ footer .footer-logo {
   transition: all 400ms ease-out;
 }
 
-.section-tienda {
+@media (min-width: 768px) {
+  .inicio__primario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+  .inicio__primario .alambre2 {
+    width: 45vw;
+    bottom: -70px;
+  }
+  .inicio__primario .img-titulo {
+    width: 70%;
+  }
+  .inicio__secundario {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .inicio__secundario img {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .inicio__primario .alambre1 {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25vw;
+    z-index: 2000;
+  }
+  .inicio__primario .alambre2 {
+    bottom: -200px;
+  }
+  .inicio__primario .vid-container {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+.tienda {
   padding-top: 70px;
 }
-.section-tienda .products-container {
+.tienda__products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
   padding: 0 10px 25px;
 }
-.section-tienda .products-container div {
+.tienda__products div {
   display: flex;
   flex-direction: column;
   padding: 16px;
 }
-.section-tienda .products-container div img {
+.tienda__products div img {
   width: 100%;
   aspect-ratio: 4/5;
   -o-object-fit: cover;
@@ -247,18 +239,18 @@ footer .footer-logo {
   filter: grayscale(0.6);
   transition: all 0.4s;
 }
-.section-tienda .products-container div img:hover {
+.tienda__products div img:hover {
   filter: grayscale(0);
 }
-.section-tienda .products-container div p {
+.tienda__products div p {
   padding-left: 10px;
 }
-.section-tienda .products-container div p span {
+.tienda__products div p span {
   text-transform: uppercase;
   font-weight: 800;
   font-size: 12px;
 }
-.section-tienda .products-container div a {
+.tienda__products div a {
   color: #fff;
   background-color: #ffb700;
   text-decoration: none;
@@ -288,9 +280,8 @@ footer .footer-logo {
      object-fit: cover;
 }
 .section-colecciones .coleccion-contenido .coleccion div h2 {
-  text-align: center;
   color: #ffb700;
-  text-transform: uppercase;
+  font-size: 26px;
 }
 .section-colecciones .coleccion-contenido .invert {
   flex-direction: column-reverse;
@@ -346,7 +337,7 @@ footer .footer-logo {
   max-width: 500px;
   margin: auto;
   padding: 20px;
-  text-align: center;
+  text-align: justify;
 }
 .contacto form {
   display: flex;

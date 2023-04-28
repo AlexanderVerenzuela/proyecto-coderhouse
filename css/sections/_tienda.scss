@@ -1,6 +1,6 @@
-.section-tienda {
+.tienda {
     padding-top: 70px;
-    .products-container {
+    &__products{
         display: grid;
         grid-template-columns: repeat(
           auto-fit,
@@ -36,7 +36,7 @@
             }
             a{
                 color: #fff;
-                background-color: #ffb700;
+                background-color: $color-primario;
                 text-decoration: none;
                 font-weight: 600;
                 padding: 3px 5px;

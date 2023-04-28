@@ -8,7 +8,7 @@
         max-width: 500px;
         margin: auto;
         padding: 20px;
-        text-align: center;
+        text-align: justify;
     }
     form {
         display: flex;
@@ -17,7 +17,7 @@
             padding: 10px 0;
             margin-bottom: 30px;
             border: none;
-            border-bottom: 1px solid #ffb700;
+            border-bottom: 1px solid $color-primario;
             &:focus {
                 outline: none;
                 animation-name: borde-bajo;
@@ -25,19 +25,19 @@
                 animation-duration: 2s;
             }
             @keyframes borde-bajo {
-                0% {border-image: linear-gradient(90deg, #ffb700 50%, #fff 100%);
+                0% {border-image: linear-gradient(90deg, $color-primario 50%, #fff 100%);
                     border-bottom: 2px solid transparent;
                     border-image-slice: 1;}
-                50% {border-image: linear-gradient(90deg, #fff 50%, #ffb700 100% );
+                50% {border-image: linear-gradient(90deg, #fff 50%, $color-primario 100% );
                     border-bottom: 2px solid transparent;
                     border-image-slice: 1;}
-                100% {border-image: linear-gradient(90deg, #ffb700 50%, #fff 100%);
+                100% {border-image: linear-gradient(90deg, $color-primario 50%, #fff 100%);
                     border-bottom: 2px solid transparent;
                      border-image-slice: 1;}
             }
         }
         .boton {
-            background-color: #ffb700;
+            background-color: $color-primario;
             color: #fff;
             font-size: 18px;
             font-weight: 600;
