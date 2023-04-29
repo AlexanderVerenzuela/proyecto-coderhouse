@@ -9,6 +9,9 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -150,8 +153,7 @@ footer .footer-logo {
   width: 100%;
   filter: grayscale(1);
   aspect-ratio: 34/47;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
 }
 .inicio__secundario div a div {
@@ -232,10 +234,8 @@ footer .footer-logo {
 .tienda__products div img {
   width: 100%;
   aspect-ratio: 4/5;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
+  object-fit: cover;
+  object-position: top;
   filter: grayscale(0.6);
   transition: all 0.4s;
 }
@@ -276,8 +276,7 @@ footer .footer-logo {
   text-align: justify;
 }
 .section-colecciones .coleccion-contenido .coleccion img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .section-colecciones .coleccion-contenido .coleccion div h2 {
   color: #ffb700;
@@ -357,20 +356,17 @@ footer .footer-logo {
 }
 @keyframes borde-bajo {
   0% {
-    -o-border-image: linear-gradient(90deg, #ffb700 50%, #fff 100%);
-       border-image: linear-gradient(90deg, #ffb700 50%, #fff 100%);
+    border-image: linear-gradient(90deg, #ffb700 50%, #fff 100%);
     border-bottom: 2px solid transparent;
     border-image-slice: 1;
   }
   50% {
-    -o-border-image: linear-gradient(90deg, #fff 50%, #ffb700 100%);
-       border-image: linear-gradient(90deg, #fff 50%, #ffb700 100%);
+    border-image: linear-gradient(90deg, #fff 50%, #ffb700 100%);
     border-bottom: 2px solid transparent;
     border-image-slice: 1;
   }
   100% {
-    -o-border-image: linear-gradient(90deg, #ffb700 50%, #fff 100%);
-       border-image: linear-gradient(90deg, #ffb700 50%, #fff 100%);
+    border-image: linear-gradient(90deg, #ffb700 50%, #fff 100%);
     border-bottom: 2px solid transparent;
     border-image-slice: 1;
   }
@@ -380,4 +376,6 @@ footer .footer-logo {
   color: #fff;
   font-size: 18px;
   font-weight: 600;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

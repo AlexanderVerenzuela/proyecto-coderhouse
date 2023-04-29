@@ -1,0 +1,51 @@
+.section-colecciones {
+  padding-top: 70px;
+
+  .coleccion-contenido {
+    display: flex;
+    flex-direction: column;
+
+    .coleccion {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 10px;
+      text-align: justify;
+
+      img {
+        object-fit: cover;
+      }
+
+      div {
+        h2 {
+          // Extend agregado************************
+          @extend .titulo-section;
+          color: $color-primario;
+          font-size: 26px;
+        }
+      }
+    }
+
+    .invert {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .section-colecciones .coleccion-contenido .coleccion {
+    flex-direction: row;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-evenly;
+
+    div {
+      padding: 0 15px;
+      width: 35%;
+    }
+
+    img {
+      width: 50%;
+    }
+  }
+}

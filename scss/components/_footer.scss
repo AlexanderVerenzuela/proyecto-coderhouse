@@ -1,41 +1,49 @@
-footer{
+footer {
     background-color: #000;
     color: #fff;
     display: flex;
     flex-direction: column;
     padding-top: 10px;
-    div{
+
+    div {
         padding: 10px 5px;
         margin: auto;
-        p{
+
+        p {
             text-align: center;
-            img{
+
+            img {
                 width: 22px;
             }
-        } 
+        }
     }
-    .redes-container{
+
+    .redes-container {
         display: flex;
         justify-content: space-evenly;
+
         .redes-logo {
             width: 35px;
             filter: invert(1);
+
             &:hover {
                 filter: invert(73%) sepia(85%) saturate(2598%) hue-rotate(1deg) brightness(106%) contrast(103%);
-              }
-          }
+            }
+        }
     }
+
     .footer-logo {
         width: 70px;
         filter: invert(1);
-      }
+    }
 }
+
 @media (min-width: 768px) {
-    footer{
+    footer {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         padding: 15px 20px 10px;
         align-items: center;
-        justify-items: center; 
+        justify-items: center;
     }
 }
